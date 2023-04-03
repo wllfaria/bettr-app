@@ -17,6 +17,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
+      "themes/*": ["themes/*"],
       "routes/*": ["routes/*"],
       "services/*": ["services/*"],
       "providers/*": ["providers/*"],
@@ -27,6 +28,6 @@
       "hooks/*": ["hooks/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
