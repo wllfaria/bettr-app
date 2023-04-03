@@ -1,11 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { useState } from 'react';
 
-export default function App() {
+import { registerRootComponent } from 'expo';
+import { ThemeProvider } from 'styled-components';
+
+import { darkTheme } from 'themes/darkTheme';
+import { lightTheme } from 'themes/lightTheme';
+
+function App() {
+  const [currentTheme] = useState('light');
   return (
-    <View>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
+      <></>
+    </ThemeProvider>
   );
 }
+
+export default registerRootComponent(App);
