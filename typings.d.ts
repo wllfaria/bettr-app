@@ -11,6 +11,7 @@ type RGB = `rgb(${number}, ${number}, ${number})`;
 type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
 type Color = HEX | JsColor | RGB | RGBA;
 type FontWeight = 200 | 300 | 'regular' | 500 | 'bold' | 900;
+type FontProp = `${number}px`;
 
 type DesignSystemTheme = {
   light: DesignSystemColors;
@@ -18,8 +19,8 @@ type DesignSystemTheme = {
 };
 
 type FontStyle = {
-  lineHeight: number;
-  fontSize: number;
+  lineHeight: FontProp;
+  fontSize: FontProp;
   fontWeight: FontWeight;
   textDecoration?: 'underline';
 };
