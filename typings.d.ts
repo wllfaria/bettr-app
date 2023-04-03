@@ -83,7 +83,7 @@ type DesignSystemTextStyles = {
   };
 };
 
-type DesignSystemColors = {
+export type DesignSystemColors = {
   text: {
     body: Color;
     description: Color;
