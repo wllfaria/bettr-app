@@ -24,85 +24,85 @@ type TextStyleMap = {
 };
 
 type TextProps = {
-  as?: TextStyles;
+  textType?: TextStyles;
   children: React.ReactNode;
   color?: keyof DefaultTheme['colors']['text'];
 };
 
 export function Text({
   children,
-  as = TextStyles.body,
+  textType = TextStyles.body,
   color = 'body',
 }: TextProps) {
   const getTextStyle = (textStyle: TextStyles) => {
     const textStyleMap: TextStyleMap = {
       largeText: (
-        <S.LargeText textStyle={as} color={color}>
+        <S.LargeText textStyle={textType} color={color}>
           {children}
         </S.LargeText>
       ),
       h1: (
-        <S.H1 textStyle={as} color={color}>
+        <S.H1 textStyle={textType} color={color}>
           {children}
         </S.H1>
       ),
       h2: (
-        <S.H2 textStyle={as} color={color}>
+        <S.H2 textStyle={textType} color={color}>
           {children}
         </S.H2>
       ),
       h3: (
-        <S.H3 textStyle={as} color={color}>
+        <S.H3 textStyle={textType} color={color}>
           {children}
         </S.H3>
       ),
       h4: (
-        <S.H4 textStyle={as} color={color}>
+        <S.H4 textStyle={textType} color={color}>
           {children}
         </S.H4>
       ),
       h5: (
-        <S.H5 textStyle={as} color={color}>
+        <S.H5 textStyle={textType} color={color}>
           {children}
         </S.H5>
       ),
       h6: (
-        <S.H6 textStyle={as} color={color}>
+        <S.H6 textStyle={textType} color={color}>
           {children}
         </S.H6>
       ),
       button: (
-        <S.Button textStyle={as} color={color}>
+        <S.Button textStyle={textType} color={color}>
           {children}
         </S.Button>
       ),
       subtitle: (
-        <S.Subtitle textStyle={as} color={color}>
+        <S.Subtitle textStyle={textType} color={color}>
           {children}
         </S.Subtitle>
       ),
       body: (
-        <S.Body textStyle={as} color={color}>
+        <S.Body textStyle={textType} color={color}>
           {children}
         </S.Body>
       ),
       bodyAlt: (
-        <S.BodyAlt textStyle={as} color={color}>
+        <S.BodyAlt textStyle={textType} color={color}>
           {children}
         </S.BodyAlt>
       ),
       subtitleAlt: (
-        <S.SubtitleAlt textStyle={as} color={color}>
+        <S.SubtitleAlt textStyle={textType} color={color}>
           {children}
         </S.SubtitleAlt>
       ),
       capture: (
-        <S.Capture textStyle={as} color={color}>
+        <S.Capture textStyle={textType} color={color}>
           {children}
         </S.Capture>
       ),
       overline: (
-        <S.Overline textStyle={as} color={color}>
+        <S.Overline textStyle={textType} color={color}>
           {children}
         </S.Overline>
       ),
@@ -111,5 +111,5 @@ export function Text({
     return textStyleMap[textStyle];
   };
 
-  return getTextStyle(as);
+  return getTextStyle(textType);
 }

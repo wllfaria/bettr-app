@@ -133,7 +133,7 @@ export const BodyAlt = styled.Text<TextProps>`
 `;
 
 export const SubtitleAlt = styled.Text<TextProps>`
-  font-family: ${FontFamily.Regular};
+  font-family: ${FontFamily.Bold};
   font-size: ${props =>
     props.theme.textStyles[props.textStyle].mobile.fontSize};
   font-weight: ${props =>
