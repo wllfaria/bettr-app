@@ -93,6 +93,20 @@ export const common: { textStyles: DefaultTheme['textStyles'] } = {
         lineHeight: '24px',
       },
     },
+    buttonAlt: {
+      mobile: {
+        fontSize: '16px',
+        fontWeight: 'bold',
+        lineHeight: '24px',
+        textDecoration: 'underline',
+      },
+      desktop: {
+        fontSize: '16px',
+        fontWeight: 'bold',
+        lineHeight: '24px',
+        textDecoration: 'underline',
+      },
+    },
     subtitle: {
       mobile: {
         fontSize: '16px',

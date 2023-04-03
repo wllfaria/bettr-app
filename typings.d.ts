@@ -53,6 +53,10 @@ type DesignSystemTextStyles = {
     mobile: FontStyle;
     desktop: FontStyle;
   };
+  buttonAlt: {
+    mobile: FontStyle;
+    desktop: FontStyle;
+  };
   button: {
     mobile: FontStyle;
     desktop: FontStyle;

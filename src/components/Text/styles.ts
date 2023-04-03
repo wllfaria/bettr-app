@@ -90,6 +90,21 @@ export const H6 = styled.Text<TextProps>`
 
 export const Button = styled.Text<TextProps>`
   font-family: ${FontFamily.Bold};
+  text-align: center;
+  font-size: ${props =>
+    props.theme.textStyles[props.textStyle].mobile.fontSize};
+  font-weight: ${props =>
+    props.theme.textStyles[props.textStyle].mobile.fontWeight};
+  line-height: ${props =>
+    props.theme.textStyles[props.textStyle].mobile.lineHeight};
+  color: ${props => props.theme.colors.text[props.color]};
+`;
+
+export const ButtonAlt = styled.Text<TextProps>`
+  font-family: ${FontFamily.Bold};
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: ${props => props.theme.colors.text[props.color]};
   font-size: ${props =>
     props.theme.textStyles[props.textStyle].mobile.fontSize};
   font-weight: ${props =>
