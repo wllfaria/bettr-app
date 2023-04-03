@@ -8,6 +8,12 @@ module.exports = function (api) {
         {
           alias: {
             themes: './src/themes',
+            routers: './src/routers',
+            utils: './src/utils',
+            pages: './src/pages',
+            components: './src/components',
+            types: './src/types',
+            hooks: './src/hooks',
           },
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
