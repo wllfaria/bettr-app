@@ -18,9 +18,7 @@
     "baseUrl": "./src",
     "paths": {
       "themes/*": ["themes/*"],
-      "routes/*": ["routes/*"],
-      "services/*": ["services/*"],
-      "providers/*": ["providers/*"],
+      "routers/*": ["routers/*"],
       "utils/*": ["utils/*"],
       "pages/*": ["pages/*"],
       "components/*": ["components/*"],

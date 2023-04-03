@@ -27,6 +27,14 @@
   "rules": {
     "no-shadow": "off",
     "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
     "import/extensions": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "off",
@@ -39,7 +47,6 @@
     "react/jsx-no-bind": "off",
     "react/jsx-props-no-spreading": "off",
     "import/prefer-default-export": "off",
-    "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "prettier/prettier": "error",
     "import-helpers/order-imports": [
@@ -53,9 +60,7 @@
           "/^components/",
           "/^hooks/",
           "/^pages/",
-          "/^providers/",
-          "/^routes/",
-          "/^services/",
+          "/^routers/",
           "/^types/",
           "/^utils/",
           ["parent", "sibling", "index"]
