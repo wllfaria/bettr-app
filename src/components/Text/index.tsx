@@ -11,6 +11,7 @@ export enum TextStyles {
   h5 = 'h5',
   h6 = 'h6',
   button = 'button',
+  buttonAlt = 'buttonAlt',
   subtitle = 'subtitle',
   body = 'body',
   bodyAlt = 'bodyAlt',
@@ -75,6 +76,11 @@ export function Text({
         <S.Button textStyle={textType} color={color}>
           {children}
         </S.Button>
+      ),
+      buttonAlt: (
+        <S.ButtonAlt textStyle={textType} color={color}>
+          {children}
+        </S.ButtonAlt>
       ),
       subtitle: (
         <S.Subtitle textStyle={textType} color={color}>
