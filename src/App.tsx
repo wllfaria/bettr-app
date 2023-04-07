@@ -1,4 +1,6 @@
-import { useCallback, useState } from 'react';
+import './i18n/config';
+
+import { useCallback } from 'react';
 
 import {
   useFonts,
@@ -10,17 +12,27 @@ import { NavigationContainer } from '@react-navigation/native';
 import { registerRootComponent } from 'expo';
 import * as SplashScreen from 'expo-splash-screen';
 import { View } from 'react-native';
+import { useColorScheme } from 'react-native';
+import * as Sentry from 'sentry-expo';
 import { ThemeProvider } from 'styled-components';
 
-import { darkTheme } from 'themes/darkTheme';
-import { lightTheme } from 'themes/lightTheme';
+import { themes } from 'themes';
 
-import { AuthRouter } from 'routers/AuthRouter';
+import { AuthState } from 'contexts/AuthContext';
+
+import { Router } from 'routers/Router';
+
+Sentry.init({
+  dsn: 'https://a29c4049ee68431e97b1c347a56fd085@o4504969005498368.ingest.sentry.io/4504969007464448',
+  enableInExpoDevelopment: true,
+  debug: true,
+});
 
 SplashScreen.preventAutoHideAsync();
 
 function App() {
-  const [currentTheme] = useState('light');
+  const deviceTheme = useColorScheme();
+  const theme = themes[deviceTheme as 'light' | 'dark'] || themes.dark;
   const [fontsLoaded] = useFonts({
     NotoSans_400Regular,
     NotoSans_700Bold,
@@ -40,10 +52,10 @@ function App() {
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <NavigationContainer>
-        <ThemeProvider
-          theme={currentTheme === 'light' ? lightTheme : darkTheme}
-        >
-          <AuthRouter />
+        <ThemeProvider theme={theme}>
+          <AuthState>
+            <Router />
+          </AuthState>
         </ThemeProvider>
       </NavigationContainer>
     </View>

@@ -23,7 +23,10 @@
       "pages/*": ["pages/*"],
       "components/*": ["components/*"],
       "types/*": ["types/*"],
-      "hooks/*": ["hooks/*"]
+      "hooks/*": ["hooks/*"],
+      "i18n/*": ["i18n/*"],
+      "services/*": ["services/*"],
+      "contexts/*": ["contexts/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
