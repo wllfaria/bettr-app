@@ -57,12 +57,15 @@
           "/^react$/",
           "module",
           "/^themes/",
-          "/^components/",
+          "/^i18n/",
           "/^hooks/",
+          "/^contexts/",
+          "/^components/",
           "/^pages/",
           "/^routers/",
           "/^types/",
           "/^utils/",
+          "/^services/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
