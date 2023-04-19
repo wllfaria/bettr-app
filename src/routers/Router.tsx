@@ -1,24 +1,32 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { BankrollsPage } from 'pages/Bankrolls';
 import { LoginPage } from 'pages/LoginPage';
 
-import { AuthRouterParamList, AuthRoutes, RouterProps } from '.';
+import {
+  AppRouterParamList,
+  AppRoutes,
+  AuthRouterParamList,
+  AuthRoutes,
+  RouterProps,
+} from '.';
 
-const Stack = createNativeStackNavigator<AuthRouterParamList>();
+const AuthStack = createNativeStackNavigator<AuthRouterParamList>();
+const AppStack = createNativeStackNavigator<AppRouterParamList>();
 
 function AuthRouter() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name={AuthRoutes.Login} component={LoginPage} />
-    </Stack.Navigator>
+    <AuthStack.Navigator screenOptions={{ headerShown: false }}>
+      <AuthStack.Screen name={AuthRoutes.Login} component={LoginPage} />
+    </AuthStack.Navigator>
   );
 }
 
 function AppRouter() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name={AuthRoutes.Login} component={LoginPage} />
-    </Stack.Navigator>
+    <AppStack.Navigator screenOptions={{ headerShown: false }}>
+      <AppStack.Screen name={AppRoutes.Bankrolls} component={BankrollsPage} />
+    </AppStack.Navigator>
   );
 }
 

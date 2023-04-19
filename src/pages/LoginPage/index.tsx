@@ -58,7 +58,8 @@ export function LoginPage({ navigation }: LoginPageProps) {
       await login(response.data.data.accessToken);
     } catch (e) {
       if (e instanceof AxiosError)
-        setLoginError(`Login:errors.${e.response?.data.error.name}`);
+        console.log(e.message, e.name, e.request, e.response);
+      setLoginError(`Login:errors.${e.response?.data.error.name}`);
     }
   };
 
